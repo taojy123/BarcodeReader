@@ -1,0 +1,10 @@
+('E:\\Workspace\\BarcodeReader\\dist\\BarcodeReader.exe',
+ False,
+ False,
+ 'icon.ico',
+ None,
+ [],
+ False,
+ True,
+ 0,
+ 1379746310L)
