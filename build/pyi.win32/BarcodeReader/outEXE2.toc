@@ -1,4 +1,4 @@
-('E:\\Workspace\\BarcodeReader\\dist\\BarcodeReader.exe',
+('E:\\Workspace\\GitHub\\BarcodeReader\\dist\\BarcodeReader.exe',
  False,
  False,
  'icon.ico',
@@ -7,4 +7,4 @@
  False,
  True,
  0,
- 1379746310L)
+ 1380293984L)

@@ -1,6 +1,6 @@
 # -*- mode: python -*-
 a = Analysis([os.path.join(HOMEPATH,'support\\_mountzlib.py'), os.path.join(HOMEPATH,'support\\useUnicode.py'), 'BarcodeReader.py'],
-             pathex=['E:\\Workspace\\BarcodeReader'])
+             pathex=['E:\\Workspace\\GitHub\\BarcodeReader'])
 pyz = PYZ(a.pure)
 exe = EXE( pyz,
           a.scripts,

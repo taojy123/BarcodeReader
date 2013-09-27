@@ -290,9 +290,9 @@ class ThreadClass2(threading.Thread):
 
         while not stopflag:
             print "Begin auto"
-            runflag=1
-
+            runflag=0
             fileNames = os.listdir(dir)
+            runflag=1
             fileCannot=[]
             fileCan=[]
             mself.gauge1.SetRange(len(fileNames))
@@ -989,7 +989,9 @@ class Frame1(wx.Frame):
 
     def Onstop(self, event):   #终止识别
         global stopflag
-        stopflag=1
+        global runflag
+        stopflag = 1
+        runflag = 0
         dlg=wx.MessageDialog(self,'已终止识别','提示',wx.OK)
         dlg.ShowModal()
         dlg.Destroy
@@ -1446,7 +1448,7 @@ class Frame1(wx.Frame):
 
                 
     def Onabout(self, event):
-        dlg=wx.MessageDialog(self,'\n   运单管理专家\n\n      版本：v4.55','关于 条形码识别系统',wx.OK)
+        dlg=wx.MessageDialog(self,'\n   运单管理专家\n\n      版本：v4.56','关于 条形码识别系统',wx.OK)
         dlg.ShowModal()
         dlg.Destroy
 
