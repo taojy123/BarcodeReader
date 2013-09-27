@@ -8,7 +8,7 @@ import os
 import time
 import datetime
 import VideoCapture
-import Image,ImageEnhance,ImageDraw,ImageFont,ImageFilter
+from PIL import Image,ImageEnhance,ImageDraw,ImageFont,ImageFilter
 import winsound
 import traceback
 

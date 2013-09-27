@@ -11,7 +11,7 @@ import uuid
 import time
 import datetime
 import threading
-import Image,ImageEnhance,ImageDraw,ImageFont,ImageFilter
+from PIL import Image,ImageEnhance,ImageDraw,ImageFont,ImageFilter
 import struct
 import win32com.client
 import ftplib
@@ -400,24 +400,28 @@ class ThreadClass2(threading.Thread):
 
                             #注册但未登录用户(最普遍情况)
                             if mself.tuser.GetLabel()=='-':
-                                savefile = 'output\\' + str(datetime.date.today()) + '\\' + srflag + rescode + strtime +  str(fileType)
-                                if srflag == "":
-                                    savefile = os.getcwd() + '\\' + savefile
-                                elif srflag == "H":
-                                    savefile = savefile.replace('output\\' + str(datetime.date.today()), "D:\\发件记录")
-                                elif srflag == "E":
-                                    savefile = savefile.replace('output\\' + str(datetime.date.today()), "D:\\签收记录")
-                                im.save(savefile)
-                                inputfile.append((rescode, savefile))
+                                savefile = 'output\\' + str(datetime.date.today()) + '\\' + rescode + strtime +  str(fileType)
+                                savefile1 = os.getcwd() + '\\' + savefile
+                                im.save(savefile1)
+                                inputfile.append((rescode, savefile1))
 
-                                updatefile='output\\update\\'+ srflag + rescode + strtime + str(fileType)
+                                if srflag == "H":
+                                    savefile2 = savefile.replace('output\\' + str(datetime.date.today()), "D:\\发件记录")
+                                    im.save(savefile2)
+                                    zip_image(savefile2, 95)
+                                if srflag == "E":
+                                    savefile2 = savefile.replace('output\\' + str(datetime.date.today()), "D:\\签收记录")
+                                    im.save(savefile2)
+                                    zip_image(savefile2, 95)
+
+                                updatefile='output\\update\\' + rescode + strtime + str(fileType)
                                 im.save(updatefile)
                                 zip_image(updatefile, 60)
 
 
                             #注册且登录用户
                             else:
-                                tfn='output\\' + str(mself.tuser.GetLabel()) +'\\'+str(datetime.date.today())+'\\'+ srflag + rescode + strtime + str(fileType)
+                                tfn='output\\' + str(mself.tuser.GetLabel()) +'\\'+str(datetime.date.today())+'\\' + rescode + strtime + str(fileType)
                                 im.save(tfn)
                                 f=open(tfn,'rb')
                                 ta=f.read()
@@ -427,14 +431,14 @@ class ThreadClass2(threading.Thread):
                                 f=open(tfn,'wb')
                                 f.write(tb+ta)
                                 f.close()
-                                inputfile.append((rescode, os.getcwd()+'\\output\\' + str(mself.tuser.GetLabel()) +'\\'+str(datetime.date.today())+'\\'+ srflag + rescode  + strtime + str(fileType)))
+                                inputfile.append((rescode, os.getcwd()+'\\output\\' + str(mself.tuser.GetLabel()) +'\\'+str(datetime.date.today())+'\\' + rescode  + strtime + str(fileType)))
                                 w,h=im.size
                                 wh=h/500.0
                                 if wh<1:
                                     wh=1
                                 im2=im
                                 im=im.resize((int(w/wh),int(h/wh)),3)
-                                updatefile='output\\update\\'+ srflag + rescode + strtime + str(fileType)
+                                updatefile='output\\update\\' + rescode + strtime + str(fileType)
                                 im.save(updatefile)
                                 while os.path.getsize(updatefile)>95000:
                                     print os.path.getsize(updatefile)
@@ -442,21 +446,26 @@ class ThreadClass2(threading.Thread):
                                     im=im2.resize((int(w/1.1),int(h/1.1)),3)
                                     im.save(updatefile)
 
-                            #注册用户识别后图片输出到output文件，所以删除识别出的原文件
-                            try:
-                                os.remove(fileName)
-                            except:
-                                pass
-
                         fileCan.append(fileName)
                         #mself.textCtrl1.SetValue(mself.textCtrl1.GetValue() + '\n- - - - - - - - - - - - -')
 
 
                     #若未识别出
                     else:
-                        fileCannot.append(fileName)
+                        #直接放入unread文件夹，不加入手工识别序列
+                        #fileCannot.append(fileName)
+                        im=Image.open(fileName)
+                        im.save( os.getcwd() + '\\output\\unread\\' + file )
+
                         mself.textCtrl1.SetValue( 'Can not read\n- - - - - - - - - - - - -\n' + mself.textCtrl1.GetValue())
+
                     #mself.textCtrl1.SetSelection(len(mself.textCtrl1.GetValue())+1000, len(mself.textCtrl1.GetValue())+1000)
+
+                    #识别后尝试删除识别出的原文件
+                    try:
+                        os.remove(fileName)
+                    except:
+                        pass
 
             mself.textCtrl1.SetValue('Finished\nRead:'+str(len(fileCan))+',Cannot Read:'+ str(len(fileCannot)) + '\n= = = = = = = = = = =\n' + mself.textCtrl1.GetValue())
             #mself.textCtrl1.SetSelection(len(mself.textCtrl1.GetValue())+1000, len(mself.textCtrl1.GetValue())+1000)
@@ -1035,15 +1044,15 @@ class Frame1(wx.Frame):
                         strtime=''
                         
                     if mself.tuser.GetLabel()=='-':
-                        im.save('output\\' + str(datetime.date.today())+'\\'+ srflag + fileName + strtime + fileType)
-                        inputfile.append((fileName, os.getcwd()+'\\output\\' + str(datetime.date.today())+'\\'+ srflag + fileName  + strtime + fileType))
+                        im.save('output\\' + str(datetime.date.today())+'\\' + fileName + strtime + fileType)
+                        inputfile.append((fileName, os.getcwd()+'\\output\\' + str(datetime.date.today())+'\\' + fileName  + strtime + fileType))
                         w,h=im.size
                         wh=h/500.0
                         if wh<1:
                             wh=1
                         im2=im
                         im=im.resize((int(w/wh),int(h/wh)),3)
-                        updatefile='output\\update\\'+ srflag + fileName + strtime + str(fileType)
+                        updatefile='output\\update\\' + fileName + strtime + str(fileType)
                         im.save(updatefile)
                         while os.path.getsize(updatefile)>95000:
                             print os.path.getsize(updatefile)
@@ -1051,7 +1060,7 @@ class Frame1(wx.Frame):
                             im=im2.resize((int(w/1.1),int(h/1.1)),3)
                             im.save(updatefile)
                     else:
-                        tfn='output\\' + str(mself.tuser.GetLabel()) +'\\'+ str(datetime.date.today())+'\\'+ srflag + fileName  + strtime + fileType
+                        tfn='output\\' + str(mself.tuser.GetLabel()) +'\\'+ str(datetime.date.today())+'\\' + fileName  + strtime + fileType
                         im.save(tfn)
                         f=open(tfn,'rb')
                         ta=f.read()
@@ -1061,14 +1070,14 @@ class Frame1(wx.Frame):
                         f=open(tfn,'wb')
                         f.write(tb+ta)
                         f.close()
-                        inputfile.append((fileName, os.getcwd()+'\\output\\' + str(mself.tuser.GetLabel()) +'\\'+ str(datetime.date.today())+'\\'+ srflag + fileName  + strtime + fileType))
+                        inputfile.append((fileName, os.getcwd()+'\\output\\' + str(mself.tuser.GetLabel()) +'\\'+ str(datetime.date.today())+'\\' + fileName  + strtime + fileType))
                         w,h=im.size
                         wh=h/500.0
                         if wh<1:
                             wh=1
                         im2=im
                         im=im.resize((int(w/wh),int(h/wh)),3)
-                        updatefile='output\\update\\'+ srflag + fileName + strtime + str(fileType)
+                        updatefile='output\\update\\' + fileName + strtime + str(fileType)
                         im.save(updatefile)
                         while os.path.getsize(updatefile)>95000:
                             print os.path.getsize(updatefile)

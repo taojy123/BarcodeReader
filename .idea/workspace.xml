@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Frame1.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Frame1.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Frame1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="744" column="41" selection-start="26206" selection-end="26206" vertical-scroll-proportion="0.9237435">
+            <state line="459" column="30" selection-start="15285" selection-end="15285" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#44#53#0" expanded="true" />
               </folding>
@@ -34,10 +34,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Dialog5.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Dialog5.py">
+      <file leaf-file-name="br.txt" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/br.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="327" column="24" selection-start="10300" selection-end="10308" vertical-scroll-proportion="0.0">
+            <state line="10" column="6" selection-start="99" selection-end="99" vertical-scroll-proportion="0.37225044">
               <folding />
             </state>
           </provider>
@@ -53,18 +53,23 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/a.py" />
         <option value="$PROJECT_DIR$/BarcodeReader.py" />
         <option value="$PROJECT_DIR$/Dialog5.py" />
+        <option value="$PROJECT_DIR$/a.py" />
+        <option value="$PROJECT_DIR$/a39_EMS.py" />
+        <option value="$PROJECT_DIR$/a39_ST.py" />
+        <option value="$PROJECT_DIR$/a39_YT.py" />
+        <option value="$PROJECT_DIR$/a39_ZT.py" />
         <option value="$PROJECT_DIR$/Frame1.py" />
+        <option value="$PROJECT_DIR$/br.txt" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="754" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -110,6 +115,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BarcodeReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="BarcodeReader" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="output" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
       <pane id="Scope" />
@@ -118,10 +137,10 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
     <property name="recentsLimit" value="5" />
-    <property name="options.searchVisible" value="true" />
+    <property name="options.lastSelected" value="com.jetbrains.python.configuration.PythonSdkConfigurable" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="RunManager" selected="Python.run">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -170,24 +189,24 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32897604" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20378788" sideWeight="0.6720779" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.17954545" sideWeight="0.6720779" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1814301" sideWeight="0.6721133" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24166666" sideWeight="0.17207792" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32792208" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3278867" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -246,45 +265,12 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/BarcodeReader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="52" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frame1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1370" column="41" selection-start="49075" selection-end="49075" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#44#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Dialog5.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="525" column="12" selection-start="19270" selection-end="19270" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/BarcodeReader.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="52" selection-start="726" selection-end="726" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Frame1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1370" column="41" selection-start="49075" selection-end="49075" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#44#53#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dialog5.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="509" column="26" selection-start="18946" selection-end="18946" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#45#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -305,7 +291,9 @@
     <entry file="file://$PROJECT_DIR$/Dialog5.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="502" column="12" selection-start="18782" selection-end="18782" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#45#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -319,11 +307,6 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="237" column="4" selection-start="7766" selection-end="7766" vertical-scroll-proportion="4.0390944" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Dialog1.py">
       <provider selected="true" editor-type-id="text-editor">
         <state line="229" column="28" selection-start="11127" selection-end="11137" vertical-scroll-proportion="0.49329758" />
@@ -334,19 +317,65 @@
         <state line="35" column="52" selection-start="726" selection-end="726" vertical-scroll-proportion="0.03812825" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/a.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="24" selection-end="33" vertical-scroll-proportion="-0.88">
+          <folding>
+            <element signature="e#24#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a39_ST.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="9" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a39_YT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="9" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a39_ZT.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="9" selection-start="33" selection-end="33" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/a39_EMS.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="9" selection-start="33" selection-end="33" vertical-scroll-proportion="0.024663677">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Dialog5.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="327" column="24" selection-start="10300" selection-end="10308" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="113" column="4" selection-start="2367" selection-end="2367" vertical-scroll-proportion="0.33295965">
+          <folding>
+            <element signature="e#45#54#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Frame1.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="744" column="41" selection-start="26206" selection-end="26206" vertical-scroll-proportion="0.9237435">
+        <state line="459" column="30" selection-start="15285" selection-end="15285" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#44#53#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/br.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="6" selection-start="99" selection-end="99" vertical-scroll-proportion="0.37225044">
+          <folding />
         </state>
       </provider>
     </entry>

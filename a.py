@@ -1,5 +1,5 @@
 # -*- coding: cp936 -*-
-import Image,ImageEnhance
+from PIL import Image,ImageEnhance
 import Frame1
 
 import subprocess
