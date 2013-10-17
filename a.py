@@ -225,7 +225,7 @@ def getbarcode(im,step,bs):
 
     subprocess.Popen("C:\\ReaderPlugin\\ReaderPlugin.exe read")
     n = 0
-    while not open('C:\\ReaderPlugin\\Result.txt','r').read() and n<5:
+    while not open('C:\\ReaderPlugin\\Result.txt','r').read() and n<10:
         print n,"===="
         n += 1
         time.sleep(1)

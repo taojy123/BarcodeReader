@@ -1448,7 +1448,7 @@ class Frame1(wx.Frame):
 
                 
     def Onabout(self, event):
-        dlg=wx.MessageDialog(self,'\n   运单管理专家\n\n      版本：v4.56','关于 条形码识别系统',wx.OK)
+        dlg=wx.MessageDialog(self,'\n   运单管理专家\n\n      版本：v4.57','关于 条形码识别系统',wx.OK)
         dlg.ShowModal()
         dlg.Destroy
 
