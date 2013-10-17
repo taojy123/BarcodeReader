@@ -215,27 +215,28 @@ def getbarcode(im,step,bs):
     #    (s) 
 
 
-    """
+    
     #======若无法识别则使用vip插件识别==========
-    if bs>30:
-        im.save('C:\\ReaderPlugin\\t.jpg')
-        time.sleep(0.2)
-        try:
-            os.remove('C:\\ReaderPlugin\\Result.txt')
-        except:
-            pass
-        process=subprocess.Popen("C:\\ReaderPlugin\\ReaderPlugin.exe C:\\ReaderPlugin\\t.jpg")
-        n=0
-        while (os.path.isfile('C:\\ReaderPlugin\\Result.txt') == False) or n<10:
-            time.sleep(0.5)
-            n=n+1
-        f=open('C:\\ReaderPlugin\\Result.txt','r')
-        res=f.read().replace('\r','').replace('\n','')
-        f.close()
-        print res
-        if res <>'unread':
-            return res
-    """
+    print "VB_Start"
+
+    im.save('C:\\ReaderPlugin\\t.jpg')
+    time.sleep(0.2)
+    open('C:\\ReaderPlugin\\Result.txt', 'w').write("")
+
+    subprocess.Popen("C:\\ReaderPlugin\\ReaderPlugin.exe read")
+    n = 0
+    while not open('C:\\ReaderPlugin\\Result.txt','r').read() and n<5:
+        print n,"===="
+        n += 1
+        time.sleep(1)
+
+    f = open('C:\\ReaderPlugin\\Result.txt','r')
+    res=f.read().replace('\r','').replace('\n','')
+    f.close()
+    print res
+    if res and res <> 'unread':
+        return res
+    
 
 
 '''
